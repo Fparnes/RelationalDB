@@ -4,6 +4,7 @@
 
 #ifndef CSC173PROJ4_DATABASE_H
 #define CSC173PROJ4_DATABASE_H
+
 typedef struct CSG  {
     char course[5];
     int  studentID;
@@ -37,4 +38,6 @@ typedef struct CR {
     char room[100];
     struct CR *nextBucket;
 }CR;
+
+
 #endif //CSC173PROJ4_DATABASE_H
