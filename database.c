@@ -1,6 +1,6 @@
 #include "database.h"
-#include('string.h')
-#include('stdlib.h')
+#include <string.h>
+#include <stdlib.h>
 
 char* concatString (char* string1, char* string2){
 
@@ -19,7 +19,7 @@ unsigned long hash = 5381;
 int counter = 0;
 
 while(counter =  *concat++){
-hash = ((hash << 5) + hash) + c;
+hash = ((hash << 5) + hash) + counter;
 }
 
 return hash;
@@ -29,52 +29,52 @@ int hashStudentID (int studentID){
     return (studentID % 1009);
 }
 
-void insertCSG (CSG tuple, CSG csgArray[1009]){
+void insertCSG (CSG *tuple, CSG *csgArray[1009]){
 
-    int specialIndex = hashStudentID(tuple.studentID);
+    int specialIndex = hashStudentID(tuple -> studentID);
 
-    if(csgArray[specialIndex] != null){
-    tuple.nextBucket = csgArray[specialIndex];
+    if(csgArray[specialIndex] != NULL){
+    tuple -> nextBucket = csgArray[specialIndex];
     }
 
     csgArray[specialIndex] = tuple;
 };
 
-void insertSNAP(SNAP tuple, SNAP snapArray[1009]){
-    int specialIndex = hashStudentID(tuple.studentID);
+void insertSNAP(SNAP *tuple, SNAP *snapArray[1009]){
+    int specialIndex = hashStudentID(tuple -> studentID);
 
-    if(snapArray[specialIndex] != null){
-        tuple.nextBucket = snapArray[specialIndex];
+    if(snapArray[specialIndex] != NULL){
+        tuple -> nextBucket = snapArray[specialIndex];
         }
 
     snapArray[specialIndex] = tuple;
 };
 
-void insertCP(CP tuple, CP cpArray[1009]){
-int specialIndex = hashString(tuple.course, tuple.preReq);
+void insertCP(CP *tuple, CP *cpArray[1009]){
+int specialIndex = hashString(tuple -> course, tuple -> preReq);
 
-if(cpArray[specialIndex] != null){
-    tuple.nextBucket = cpArray[specialIndex];
+if(cpArray[specialIndex] != NULL){
+    tuple->nextBucket = cpArray[specialIndex];
     }
 
     cpArray[specialIndex] = tuple;
 };
 
-void insertCDH (CDH tuple, cdhArray[1009]) {
-int specialIndex = hashString(tuple.course, tuple.day);
+void insertCDH (CDH *tuple, CDH *cdhArray[1009]) {
+int specialIndex = hashString(tuple->course, tuple->day);
 
-if(cdhArray[specialIndex] != null){
-    tuple.nextBucket = cdhArray[specialIndex];
+if(cdhArray[specialIndex] != NULL){
+    tuple->nextBucket = cdhArray[specialIndex];
     }
 
     cdhArray[specialIndex] = tuple;
 };
 
-void insertCR (CR tuple, crArray[1009]) {
-int specialIndex = hashString(tuple.course, "");
+void insertCR (CR *tuple,CR *crArray[1009]) {
+int specialIndex = hashString(tuple->course, "");
 
-if(crArray[specialIndex] != null){
-    tuple.nextBucket = crArray[specialIndex];
+if(crArray[specialIndex] != NULL){
+    tuple->nextBucket = crArray[specialIndex];
     }
 
     crArray[specialIndex] = tuple;
@@ -103,14 +103,14 @@ CR *lookupCR () {
 
 
 int main() {
-    CSG csgArray[1009];
+    CSG* csgArray[1009];
 
-    SNAP snapArray[1009];
+    SNAP* snapArray[1009];
 
-    CP cpArray[1009];
+    CP* cpArray[1009];
 
-    CDH cdhArray[1009];
+    CDH* cdhArray[1009];
 
-    CR crArray[1009];
+    CR* crArray[1009];
 
 }
