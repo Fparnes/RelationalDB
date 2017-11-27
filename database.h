@@ -4,38 +4,50 @@
 
 #ifndef CSC173PROJ4_DATABASE_H
 #define CSC173PROJ4_DATABASE_H
+#define CNS 5
+#define PRS 5
+#define GNS 5
+#define DNS 2
+#define HNS 4
+#define NNS 100
+#define ANS 100
+#define PNS 10
+#define RNS 100
+#define SINS 6
+
+
 
 typedef struct CSG  {
-    char course[5];
+    char course[CNS];
     int  studentID;
-    char grade[5];
+    char grade[GNS];
     struct CSG *nextBucket;
 }CSG;
 
 typedef struct SNAP {
-    char name[100];
-    char Address[100];
-    char phoneNum[10];
+    char name[NNS];
+    char Address[ANS];
+    char phoneNum[PNS];
     int studentID;
     struct SNAP *nextBucket;
 }SNAP;
 
 typedef struct CP {
-    char course[5];
-    char preReq[5];
+    char course[CNS];
+    char preReq[PRS];
     struct CP *nextBucket;
 }CP;
 
 typedef struct CDH {
-    char course[5];
-    char day[2];
-    char hour[4];
+    char course[CNS];
+    char day[DNS];
+    char hour[HNS];
     struct CDH *nextBucket;
 }CDH;
 
 typedef struct CR {
-    char course[5];
-    char room[100];
+    char course[CNS];
+    char room[CNS];
     struct CR *nextBucket;
 }CR;
 
