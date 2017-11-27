@@ -14,6 +14,7 @@
 #define PNS 10
 #define RNS 100
 #define SINS 6
+#define MAP_SIZE 1009
 
 
 
