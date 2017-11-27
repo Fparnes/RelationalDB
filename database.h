@@ -27,7 +27,7 @@ typedef struct CSG  {
 
 typedef struct SNAP {
     char name[NNS];
-    char Address[ANS];
+    char address[ANS];
     char phoneNum[PNS];
     int studentID;
     struct SNAP *nextBucket;
