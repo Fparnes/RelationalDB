@@ -61,7 +61,7 @@ printf("helloBEFOREIF!\n");
 if(CSGComp(listHead, course, studentID, grade) == 1){
 printf("helloINIF!\n");
  printf("%s, %d, %s \n", listHead -> course, listHead -> studentID, listHead -> grade);
- listHead -> nextBucket = NULL;
+// listHead -> nextBucket = NULL;
 accepted[counter] = listHead;
 counter++;
 }
@@ -193,15 +193,15 @@ CR *lookupCR () {
 
 
 int main() {
-    CSG* csgArray[1009];
+    CSG* csgArray[1009] = {NULL};
 
-    SNAP* snapArray[1009];
+    SNAP* snapArray[1009] = {NULL};
 
-    CP* cpArray[1009];
+    CP* cpArray[1009] = {NULL};
 
-    CDH* cdhArray[1009];
+    CDH* cdhArray[1009] = {NULL};
 
-    CR* crArray[1009];
+    CR* crArray[1009] = {NULL};
 
     CSG tuple;
 
