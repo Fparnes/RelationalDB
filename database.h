@@ -4,7 +4,7 @@
 
 #ifndef CSC173PROJ4_DATABASE_H
 #define CSC173PROJ4_DATABASE_H
-#define CNS 5
+#define CNS 6
 #define PRS 5
 #define GNS 5
 #define DNS 2
@@ -48,9 +48,22 @@ typedef struct CDH {
 
 typedef struct CR {
     char course[CNS];
-    char room[CNS];
+    char room[RNS];
     struct CR *nextBucket;
 }CR;
 
+typedef struct CRDH {
+ char course[CNS];
+ char room[RNS];
+ char day[DNS];
+ char hour[HNS];
+ struct CRDH *nextBucket;
+}CRDH;
+
+typedef struct DH {
+ char day[DNS];
+ char hour[HNS];
+ struct DH *nextBucket;
+}DH;
 
 #endif //CSC173PROJ4_DATABASE_H
