@@ -1,13 +1,17 @@
-//
-// Created by fernp on 11/13/2017.
-//
+/*
+AUTHOR: FERNANDO PARNES
+CSC 173 - PROJECT 4
+DATE: 11/28/2017 - 7:30PM
+
+Declares the structs that are used to build database.
+*/
 
 #ifndef CSC173PROJ4_DATABASE_H
 #define CSC173PROJ4_DATABASE_H
 #define CNS 6
 #define PRS 5
 #define GNS 5
-#define DNS 2
+#define DNS 3
 #define HNS 4
 #define NNS 100
 #define ANS 100
